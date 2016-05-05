@@ -12,11 +12,17 @@ import CoreData
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-    var window: UIWindow?
-
+    var window: UIWindow? = UIWindow(frame: UIScreen.mainScreen().bounds)
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        
+        let favoryArtistsList = MListViewController()
+        favoryArtistsList.dataProvider = ArtistsListDataProvider()
+        
+        window!.rootViewController = UINavigationController(rootViewController: favoryArtistsList)
+        window!.makeKeyAndVisible()
+        
         return true
     }
 

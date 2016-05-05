@@ -26,6 +26,14 @@ class MuziklenTests: XCTestCase {
         // Use XCTAssert and related functions to verify your tests produce the correct results.
     }
     
+    func testThatPasses() {
+        XCTAssertEqual(1+2, 3, "üçe eşit olmalı")
+    }
+    
+    func testThatDoesntPass(){
+        // XCTAssertEqual(2+2, 5, "2+2=5?")
+    }
+    
     func testPerformanceExample() {
         // This is an example of a performance test case.
         self.measureBlock {
