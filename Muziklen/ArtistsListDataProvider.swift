@@ -12,19 +12,32 @@ class ArtistsListDataProvider: NSObject, ListDataProvider {
 
     private let cellIdentifier = "Cell"
     
+    private var artists = [Artist]()
+    
     func registerCellsForTableView(tableView: UITableView) {
-        tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: self.cellIdentifier)
+        tableView.registerClass(MArtistsTableViewCell.self, forCellReuseIdentifier: self.cellIdentifier)
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return artists.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! MArtistsTableViewCell
         
-        cell.textLabel?.text = "Row \(indexPath.row)"
+        cell.lblName.text = artists[indexPath.row].name
+        cell.lblFollowersCount.text = "134"
         
         return cell
+    }
+}
+
+extension ArtistsListDataProvider {
+    func addArtist(artist: Artist){
+        self.artists.append(artist)
+    }
+    
+    func addArtists(artists: [Artist]) {
+        self.artists += artists
     }
 }

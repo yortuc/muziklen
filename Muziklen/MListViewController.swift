@@ -24,6 +24,11 @@ class MListViewController: UITableViewController {
     }
     
     func addItem(){
+        let dp = self.dataProvider as! ArtistsListDataProvider
         
+        let artist = Artist(name: "Muser", tags:["rock", "alternative"], info: "best rock band evet", followersCount: 14, albums: [])
+        
+        dp.addArtist(artist)
+        tableView.reloadData()
     }
 }

@@ -9,8 +9,22 @@
 import UIKit
 
 struct Artist {
-
     let name: String
+    let tags: [String]
+    let info: String
+    
     let followersCount: Int
     
+    let albums: [Album]
+}
+
+struct Album{
+    let title: String
+    let coverImageUrl: String
+    let tracks: [Track]
+}
+
+struct Track {
+    let title: String
+    let youtubeAddress: String
 }

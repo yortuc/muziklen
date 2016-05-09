@@ -23,6 +23,17 @@ class MuziklenUITests: XCTestCase {
         // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
     }
     
+    func testConfigureCell(){
+        
+        //let sutItemIndex = 1
+        //let artistCell = listView?.tableView.cellForRowAtIndexPath(NSIndexPath(forRow: sutItemIndex, inSection: 0)) as? MArtistsTableViewCell
+        
+        // check artist name
+        //let cellArtistName = artistCell?.lblName.text
+        
+        //XCTAssertTrue(cellArtistName == artistList?[sutItemIndex].name)
+    }
+    
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()

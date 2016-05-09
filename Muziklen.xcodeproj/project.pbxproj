@@ -11,12 +11,13 @@
 		15FE30151CDBC2B5005BE6CC /* Muziklen.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 15FE30131CDBC2B5005BE6CC /* Muziklen.xcdatamodeld */; };
 		15FE30171CDBC2B5005BE6CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15FE30161CDBC2B5005BE6CC /* Assets.xcassets */; };
 		15FE301A1CDBC2B5005BE6CC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15FE30181CDBC2B5005BE6CC /* LaunchScreen.storyboard */; };
-		15FE30251CDBC2B5005BE6CC /* MuziklenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15FE30241CDBC2B5005BE6CC /* MuziklenTests.swift */; };
+		15FE30251CDBC2B5005BE6CC /* MListViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15FE30241CDBC2B5005BE6CC /* MListViewControllerTests.swift */; };
 		15FE30301CDBC2B5005BE6CC /* MuziklenUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15FE302F1CDBC2B5005BE6CC /* MuziklenUITests.swift */; };
 		15FE303E1CDBC603005BE6CC /* MListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15FE303D1CDBC603005BE6CC /* MListViewController.swift */; };
 		15FE30421CDBC6B6005BE6CC /* ArtistsListDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15FE30411CDBC6B6005BE6CC /* ArtistsListDataProvider.swift */; };
 		15FE30441CDBC83D005BE6CC /* ListDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15FE30431CDBC83D005BE6CC /* ListDataProvider.swift */; };
 		15FE30461CDBC91B005BE6CC /* Artist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15FE30451CDBC91B005BE6CC /* Artist.swift */; };
+		15FE30481CDF2AAB005BE6CC /* MArtistsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15FE30471CDF2AAA005BE6CC /* MArtistsTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,7 +45,7 @@
 		15FE30191CDBC2B5005BE6CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		15FE301B1CDBC2B5005BE6CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		15FE30201CDBC2B5005BE6CC /* MuziklenTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MuziklenTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		15FE30241CDBC2B5005BE6CC /* MuziklenTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuziklenTests.swift; sourceTree = "<group>"; };
+		15FE30241CDBC2B5005BE6CC /* MListViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MListViewControllerTests.swift; sourceTree = "<group>"; };
 		15FE30261CDBC2B5005BE6CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		15FE302B1CDBC2B5005BE6CC /* MuziklenUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MuziklenUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		15FE302F1CDBC2B5005BE6CC /* MuziklenUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuziklenUITests.swift; sourceTree = "<group>"; };
@@ -53,6 +54,7 @@
 		15FE30411CDBC6B6005BE6CC /* ArtistsListDataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ArtistsListDataProvider.swift; path = Muziklen/ArtistsListDataProvider.swift; sourceTree = "<group>"; };
 		15FE30431CDBC83D005BE6CC /* ListDataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ListDataProvider.swift; path = Muziklen/ListDataProvider.swift; sourceTree = "<group>"; };
 		15FE30451CDBC91B005BE6CC /* Artist.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Artist.swift; path = Muziklen/Artist.swift; sourceTree = "<group>"; };
+		15FE30471CDF2AAA005BE6CC /* MArtistsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MArtistsTableViewCell.swift; path = Muziklen/MArtistsTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,7 +119,7 @@
 		15FE30231CDBC2B5005BE6CC /* MuziklenTests */ = {
 			isa = PBXGroup;
 			children = (
-				15FE30241CDBC2B5005BE6CC /* MuziklenTests.swift */,
+				15FE30241CDBC2B5005BE6CC /* MListViewControllerTests.swift */,
 				15FE30261CDBC2B5005BE6CC /* Info.plist */,
 			);
 			path = MuziklenTests;
@@ -136,6 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				15FE303D1CDBC603005BE6CC /* MListViewController.swift */,
+				15FE30471CDF2AAA005BE6CC /* MArtistsTableViewCell.swift */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -283,6 +286,7 @@
 				15FE30461CDBC91B005BE6CC /* Artist.swift in Sources */,
 				15FE303E1CDBC603005BE6CC /* MListViewController.swift in Sources */,
 				15FE30151CDBC2B5005BE6CC /* Muziklen.xcdatamodeld in Sources */,
+				15FE30481CDF2AAB005BE6CC /* MArtistsTableViewCell.swift in Sources */,
 				15FE30441CDBC83D005BE6CC /* ListDataProvider.swift in Sources */,
 				15FE300D1CDBC2B5005BE6CC /* AppDelegate.swift in Sources */,
 				15FE30421CDBC6B6005BE6CC /* ArtistsListDataProvider.swift in Sources */,
@@ -293,7 +297,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				15FE30251CDBC2B5005BE6CC /* MuziklenTests.swift in Sources */,
+				15FE30251CDBC2B5005BE6CC /* MListViewControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
