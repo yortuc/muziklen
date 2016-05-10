@@ -14,16 +14,83 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow? = UIWindow(frame: UIScreen.mainScreen().bounds)
 
+    let artists = [
+        Artist(name: "Muse", tags: ["alternative rock"], info: "second best band ever", followersCount: 120, albums: [
+            Album(title: "Showbiz", coverImageUrl: "", tracks: [
+                Track(title: "Sunburn", youtubeAddress: ""),
+                Track(title: "Muscle Museum", youtubeAddress: ""),
+                Track(title: "Cave", youtubeAddress: ""),
+                Track(title: "Uno", youtubeAddress: "")
+                ]),
+            Album(title: "Origin of Symmetry", coverImageUrl: "", tracks: [
+                Track(title: "New Born", youtubeAddress: ""),
+                Track(title: "Bliss", youtubeAddress: ""),
+                Track(title: "Space Dementia", youtubeAddress: ""),
+                Track(title: "Plugin Baby", youtubeAddress: "")
+                ]),
+            Album(title: "Absolution", coverImageUrl: "", tracks: [
+                Track(title: "Sing for Absolution", youtubeAddress: ""),
+                Track(title: "Time is Running Out", youtubeAddress: ""),
+                Track(title: "Stockholm Syndrome", youtubeAddress: "")
+                ]),
+            Album(title: "Black Holes and Revelations", coverImageUrl: "", tracks: [])
+            ]),
+        Artist(name: "Queen", tags: ["rock"], info: "best band ever", followersCount: 450, albums: [
+            Album(title: "Jazz", coverImageUrl: "", tracks: []),
+            Album(title: "Innuendo", coverImageUrl: "", tracks: []),
+            Album(title: "Phantom of The Opera", coverImageUrl: "", tracks: [])
+            ]),
+        Artist(name: "Talking Heads", tags: ["alternative"], info: " ", followersCount: 20, albums: [])
+    ]
+
+    let favoryArtistsList = MListViewController()
+    
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         
-        let favoryArtistsList = MListViewController()
-        favoryArtistsList.dataProvider = ArtistsListDataProvider()
+        favoryArtistsList.title = "Favoriler"
+
+        let artistsData = ArtistsListDataProvider()
+        artistsData.addArtists(artists)
         
+        favoryArtistsList.dataProvider = artistsData
+        favoryArtistsList.onItemSelected = onArtistSelected
+
         window!.rootViewController = UINavigationController(rootViewController: favoryArtistsList)
         window!.makeKeyAndVisible()
         
         return true
+    }
+    
+    func onArtistSelected(artistIndex: Int) {
+        print("artist selected: \( artistIndex )")
+        
+        let albumsList = MListViewController()
+        albumsList.title = artists[artistIndex].name
+        
+        let albumsData = AlbumListDataProvider()
+        albumsData.addAlbums(artists[artistIndex].albums)
+        albumsList.dataProvider = albumsData
+        
+        albumsList.onItemSelected = { albumIndex in
+            self.onAlbumSelected(artistIndex, albumIndex: albumIndex)
+        }
+        
+        favoryArtistsList.navigationController?.pushViewController(albumsList, animated: true)
+    }
+    
+    func onAlbumSelected(artistIndex:Int, albumIndex: Int){
+        
+        print("album selected: \( albumIndex )")
+        
+        let trackList = MListViewController()
+        trackList.title = artists[artistIndex].albums[albumIndex].title
+        
+        let tracksData = TrackListDataProvider()
+        tracksData.addTracks(artists[artistIndex].albums[albumIndex].tracks)
+        trackList.dataProvider = tracksData
+        
+        favoryArtistsList.navigationController?.pushViewController(trackList, animated: true)
     }
 
     func applicationWillResignActive(application: UIApplication) {

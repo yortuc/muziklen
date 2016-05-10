@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="151" id="KGk-i7-Jjw" customClass="MAlbumListCell" customModule="Muziklen" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="396" height="151"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="396" height="150"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="muse" translatesAutoresizingMaskIntoConstraints="NO" id="sYz-gR-xEE">
+                        <rect key="frame" x="8" y="8" width="64" height="64"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="64" id="XbH-9O-4uN"/>
+                            <constraint firstAttribute="height" constant="64" id="rUn-up-Bhc"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Album Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WgB-In-DFK">
+                        <rect key="frame" x="80" y="17" width="308" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="rvN-g8-TAi"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sub info about album" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zxW-y7-Zvx">
+                        <rect key="frame" x="80" y="42" width="308" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="t8e-LU-egr"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="zxW-y7-Zvx" firstAttribute="leading" secondItem="sYz-gR-xEE" secondAttribute="trailing" constant="8" id="0JX-nu-Xh9"/>
+                    <constraint firstItem="sYz-gR-xEE" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="6nQ-jd-3Sd"/>
+                    <constraint firstItem="WgB-In-DFK" firstAttribute="leading" secondItem="sYz-gR-xEE" secondAttribute="trailing" constant="8" id="EFM-KE-u00"/>
+                    <constraint firstItem="zxW-y7-Zvx" firstAttribute="top" secondItem="WgB-In-DFK" secondAttribute="bottom" constant="4" id="Ibv-LQ-qMO"/>
+                    <constraint firstItem="sYz-gR-xEE" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="JMe-Jl-mf1"/>
+                    <constraint firstAttribute="trailing" secondItem="WgB-In-DFK" secondAttribute="trailing" constant="8" id="rhD-Zp-eQ1"/>
+                    <constraint firstAttribute="trailing" secondItem="zxW-y7-Zvx" secondAttribute="trailing" constant="8" id="tAd-QB-Yw8"/>
+                    <constraint firstItem="sYz-gR-xEE" firstAttribute="top" secondItem="WgB-In-DFK" secondAttribute="bottom" constant="-30" id="zFn-oS-jJ5"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="constAlbumWidth" destination="XbH-9O-4uN" id="Pbl-oY-ad2"/>
+                <outlet property="constImgAlbumHeight" destination="rUn-up-Bhc" id="NJZ-40-1pv"/>
+                <outlet property="imgAlbumCover" destination="sYz-gR-xEE" id="gDI-om-CEW"/>
+                <outlet property="lblAlbumSubInfo" destination="zxW-y7-Zvx" id="Xqx-rq-hvV"/>
+                <outlet property="lblAlbumTitle" destination="WgB-In-DFK" id="mzG-FV-dcd"/>
+            </connections>
+            <point key="canvasLocation" x="580" y="582.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="muse" width="720" height="455"/>
+    </resources>
+</document>

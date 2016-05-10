@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="MArtistListCell" customModule="Muziklen" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="214"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="th" translatesAutoresizingMaskIntoConstraints="NO" id="V2I-zD-K7e">
+                    <rect key="frame" x="8" y="8" width="64" height="64"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="64" id="DWv-gz-APk"/>
+                        <constraint firstAttribute="width" constant="64" id="zmY-X7-jIv"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artist Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wVs-Ql-y4v">
+                    <rect key="frame" x="80" y="29" width="512" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="2CQ-5W-bWk"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="wVs-Ql-y4v" firstAttribute="leading" secondItem="V2I-zD-K7e" secondAttribute="trailing" constant="8" id="DPb-9B-Soi"/>
+                <constraint firstItem="wVs-Ql-y4v" firstAttribute="centerY" secondItem="V2I-zD-K7e" secondAttribute="centerY" id="M0b-y6-eFa"/>
+                <constraint firstItem="V2I-zD-K7e" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="TWD-vI-F3n"/>
+                <constraint firstItem="V2I-zD-K7e" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="YvI-0J-589"/>
+                <constraint firstAttribute="trailing" secondItem="wVs-Ql-y4v" secondAttribute="trailing" constant="8" id="nSv-Dj-qyd"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="constImgArtistHeight" destination="DWv-gz-APk" id="9Yv-Hu-q2L"/>
+                <outlet property="constImgArtistWidth" destination="zmY-X7-jIv" id="ABh-EB-NV2"/>
+                <outlet property="imgArtist" destination="V2I-zD-K7e" id="XqQ-ld-6wc"/>
+                <outlet property="lblArtistTitle" destination="wVs-Ql-y4v" id="eqX-vG-ZXQ"/>
+            </connections>
+            <point key="canvasLocation" x="583" y="214"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="th" width="824" height="597"/>
+    </resources>
+</document>

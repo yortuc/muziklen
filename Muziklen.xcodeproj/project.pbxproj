@@ -17,7 +17,15 @@
 		15FE30421CDBC6B6005BE6CC /* ArtistsListDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15FE30411CDBC6B6005BE6CC /* ArtistsListDataProvider.swift */; };
 		15FE30441CDBC83D005BE6CC /* ListDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15FE30431CDBC83D005BE6CC /* ListDataProvider.swift */; };
 		15FE30461CDBC91B005BE6CC /* Artist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15FE30451CDBC91B005BE6CC /* Artist.swift */; };
-		15FE30481CDF2AAB005BE6CC /* MArtistsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15FE30471CDF2AAA005BE6CC /* MArtistsTableViewCell.swift */; };
+		15FE30481CDF2AAB005BE6CC /* MArtistListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15FE30471CDF2AAA005BE6CC /* MArtistListCell.swift */; };
+		15FE304A1CE22462005BE6CC /* MArtistListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15FE30491CE22462005BE6CC /* MArtistListCell.xib */; };
+		15FE304C1CE23096005BE6CC /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15FE304B1CE23096005BE6CC /* App.swift */; };
+		15FE304F1CE23CAC005BE6CC /* MAlbumListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15FE304D1CE23CAC005BE6CC /* MAlbumListCell.swift */; };
+		15FE30501CE23CAC005BE6CC /* MAlbumListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15FE304E1CE23CAC005BE6CC /* MAlbumListCell.xib */; };
+		15FE30521CE23E69005BE6CC /* AlbumListDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15FE30511CE23E69005BE6CC /* AlbumListDataProvider.swift */; };
+		15FE30551CE24F90005BE6CC /* MTrackListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15FE30531CE24F90005BE6CC /* MTrackListCell.swift */; };
+		15FE30561CE24F90005BE6CC /* MTrackListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15FE30541CE24F90005BE6CC /* MTrackListCell.xib */; };
+		15FE30581CE2502B005BE6CC /* TrackListDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15FE30571CE2502B005BE6CC /* TrackListDataProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,7 +62,15 @@
 		15FE30411CDBC6B6005BE6CC /* ArtistsListDataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ArtistsListDataProvider.swift; path = Muziklen/ArtistsListDataProvider.swift; sourceTree = "<group>"; };
 		15FE30431CDBC83D005BE6CC /* ListDataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ListDataProvider.swift; path = Muziklen/ListDataProvider.swift; sourceTree = "<group>"; };
 		15FE30451CDBC91B005BE6CC /* Artist.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Artist.swift; path = Muziklen/Artist.swift; sourceTree = "<group>"; };
-		15FE30471CDF2AAA005BE6CC /* MArtistsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MArtistsTableViewCell.swift; path = Muziklen/MArtistsTableViewCell.swift; sourceTree = "<group>"; };
+		15FE30471CDF2AAA005BE6CC /* MArtistListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MArtistListCell.swift; path = Muziklen/MArtistListCell.swift; sourceTree = "<group>"; };
+		15FE30491CE22462005BE6CC /* MArtistListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MArtistListCell.xib; path = Muziklen/MArtistListCell.xib; sourceTree = "<group>"; };
+		15FE304B1CE23096005BE6CC /* App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
+		15FE304D1CE23CAC005BE6CC /* MAlbumListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MAlbumListCell.swift; path = Muziklen/MAlbumListCell.swift; sourceTree = "<group>"; };
+		15FE304E1CE23CAC005BE6CC /* MAlbumListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MAlbumListCell.xib; path = Muziklen/MAlbumListCell.xib; sourceTree = "<group>"; };
+		15FE30511CE23E69005BE6CC /* AlbumListDataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AlbumListDataProvider.swift; path = Muziklen/AlbumListDataProvider.swift; sourceTree = "<group>"; };
+		15FE30531CE24F90005BE6CC /* MTrackListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MTrackListCell.swift; path = Muziklen/MTrackListCell.swift; sourceTree = "<group>"; };
+		15FE30541CE24F90005BE6CC /* MTrackListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MTrackListCell.xib; path = Muziklen/MTrackListCell.xib; sourceTree = "<group>"; };
+		15FE30571CE2502B005BE6CC /* TrackListDataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TrackListDataProvider.swift; path = Muziklen/TrackListDataProvider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +128,7 @@
 				15FE30181CDBC2B5005BE6CC /* LaunchScreen.storyboard */,
 				15FE301B1CDBC2B5005BE6CC /* Info.plist */,
 				15FE30131CDBC2B5005BE6CC /* Muziklen.xcdatamodeld */,
+				15FE304B1CE23096005BE6CC /* App.swift */,
 			);
 			path = Muziklen;
 			sourceTree = "<group>";
@@ -138,7 +155,12 @@
 			isa = PBXGroup;
 			children = (
 				15FE303D1CDBC603005BE6CC /* MListViewController.swift */,
-				15FE30471CDF2AAA005BE6CC /* MArtistsTableViewCell.swift */,
+				15FE30471CDF2AAA005BE6CC /* MArtistListCell.swift */,
+				15FE30491CE22462005BE6CC /* MArtistListCell.xib */,
+				15FE304D1CE23CAC005BE6CC /* MAlbumListCell.swift */,
+				15FE304E1CE23CAC005BE6CC /* MAlbumListCell.xib */,
+				15FE30531CE24F90005BE6CC /* MTrackListCell.swift */,
+				15FE30541CE24F90005BE6CC /* MTrackListCell.xib */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -146,9 +168,11 @@
 		15FE30401CDBC692005BE6CC /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				15FE30451CDBC91B005BE6CC /* Artist.swift */,
 				15FE30431CDBC83D005BE6CC /* ListDataProvider.swift */,
 				15FE30411CDBC6B6005BE6CC /* ArtistsListDataProvider.swift */,
-				15FE30451CDBC91B005BE6CC /* Artist.swift */,
+				15FE30511CE23E69005BE6CC /* AlbumListDataProvider.swift */,
+				15FE30571CE2502B005BE6CC /* TrackListDataProvider.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -258,7 +282,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				15FE301A1CDBC2B5005BE6CC /* LaunchScreen.storyboard in Resources */,
+				15FE30501CE23CAC005BE6CC /* MAlbumListCell.xib in Resources */,
+				15FE304A1CE22462005BE6CC /* MArtistListCell.xib in Resources */,
 				15FE30171CDBC2B5005BE6CC /* Assets.xcassets in Resources */,
+				15FE30561CE24F90005BE6CC /* MTrackListCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,11 +311,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				15FE30461CDBC91B005BE6CC /* Artist.swift in Sources */,
+				15FE30581CE2502B005BE6CC /* TrackListDataProvider.swift in Sources */,
 				15FE303E1CDBC603005BE6CC /* MListViewController.swift in Sources */,
+				15FE304F1CE23CAC005BE6CC /* MAlbumListCell.swift in Sources */,
 				15FE30151CDBC2B5005BE6CC /* Muziklen.xcdatamodeld in Sources */,
-				15FE30481CDF2AAB005BE6CC /* MArtistsTableViewCell.swift in Sources */,
+				15FE30481CDF2AAB005BE6CC /* MArtistListCell.swift in Sources */,
+				15FE30551CE24F90005BE6CC /* MTrackListCell.swift in Sources */,
 				15FE30441CDBC83D005BE6CC /* ListDataProvider.swift in Sources */,
+				15FE304C1CE23096005BE6CC /* App.swift in Sources */,
 				15FE300D1CDBC2B5005BE6CC /* AppDelegate.swift in Sources */,
+				15FE30521CE23E69005BE6CC /* AlbumListDataProvider.swift in Sources */,
 				15FE30421CDBC6B6005BE6CC /* ArtistsListDataProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

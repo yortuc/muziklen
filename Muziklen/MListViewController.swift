@@ -12,23 +12,38 @@ class MListViewController: UITableViewController {
 
     var dataProvider: ListDataProvider?
     
+    var onItemSelected: ( (itemIndex: Int) -> Void )?
+    
+    var cellEditConfig: ((tableView: UITableView, indexPath: NSIndexPath) -> [UITableViewRowAction]?)?
+        
     override func viewDidLoad() {
         
         // setup data source for tableView
         tableView.dataSource = self.dataProvider
         self.dataProvider?.registerCellsForTableView(tableView)
-        
-        // add button
-        let addButton = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: #selector(addItem))
-        navigationItem.rightBarButtonItem = addButton
+        tableView.reloadData()
     }
     
-    func addItem(){
-        let dp = self.dataProvider as! ArtistsListDataProvider
-        
-        let artist = Artist(name: "Muser", tags:["rock", "alternative"], info: "best rock band evet", followersCount: 14, albums: [])
-        
-        dp.addArtist(artist)
-        tableView.reloadData()
+    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return self.dataProvider!.tableView(tableView, heightForRowAtIndexPath: indexPath)
+    }
+    
+    override func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
+        cell.separatorInset = UIEdgeInsetsZero
+    }
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        if let onSelected = self.onItemSelected {
+            onSelected(itemIndex: indexPath.row)
+        }
+    }
+    
+    override func tableView(tableView: UITableView, editActionsForRowAtIndexPath indexPath: NSIndexPath) -> [UITableViewRowAction]? {
+        if let cellEdit = self.cellEditConfig {
+            return cellEdit(tableView: tableView, indexPath: indexPath)
+        }
+        else{
+            return nil
+        }
     }
 }

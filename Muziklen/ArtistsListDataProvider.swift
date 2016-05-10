@@ -15,7 +15,9 @@ class ArtistsListDataProvider: NSObject, ListDataProvider {
     private var artists = [Artist]()
     
     func registerCellsForTableView(tableView: UITableView) {
-        tableView.registerClass(MArtistsTableViewCell.self, forCellReuseIdentifier: self.cellIdentifier)
+        // tableView.registerClass(MArtistsTableViewCell.self, forCellReuseIdentifier: self.cellIdentifier)
+
+        tableView.registerNib(UINib(nibName: "MArtistListCell", bundle: nil), forCellReuseIdentifier: cellIdentifier)
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -23,12 +25,15 @@ class ArtistsListDataProvider: NSObject, ListDataProvider {
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! MArtistsTableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! MArtistListCell
         
-        cell.lblName.text = artists[indexPath.row].name
-        cell.lblFollowersCount.text = "134"
-        
+        cell.lblArtistTitle.text = artists[indexPath.row].name
+       
         return cell
+    }
+    
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return App.UI.artistImageSize + CGFloat(2*8)
     }
 }
 

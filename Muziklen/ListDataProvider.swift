@@ -12,4 +12,5 @@ protocol ListDataProvider: UITableViewDataSource {
     func registerCellsForTableView(tableView: UITableView)
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat
 }
