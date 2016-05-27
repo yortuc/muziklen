@@ -9,11 +9,10 @@
 import UIKit
 
 struct Artist {
+    let id: String
     let name: String
-    let tags: [String]
-    let info: String
-    
-    let followersCount: Int
+    let listeners: Int
+    let imageUrl: String
     
     let albums: [Album]
 }

@@ -9,60 +9,56 @@
 import UIKit
 import CoreData
 
+var currentView: UIViewController?
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow? = UIWindow(frame: UIScreen.mainScreen().bounds)
-
-    let artists = [
-        Artist(name: "Muse", tags: ["alternative rock"], info: "second best band ever", followersCount: 120, albums: [
-            Album(title: "Showbiz", coverImageUrl: "", tracks: [
-                Track(title: "Sunburn", youtubeAddress: ""),
-                Track(title: "Muscle Museum", youtubeAddress: ""),
-                Track(title: "Cave", youtubeAddress: ""),
-                Track(title: "Uno", youtubeAddress: "")
-                ]),
-            Album(title: "Origin of Symmetry", coverImageUrl: "", tracks: [
-                Track(title: "New Born", youtubeAddress: ""),
-                Track(title: "Bliss", youtubeAddress: ""),
-                Track(title: "Space Dementia", youtubeAddress: ""),
-                Track(title: "Plugin Baby", youtubeAddress: "")
-                ]),
-            Album(title: "Absolution", coverImageUrl: "", tracks: [
-                Track(title: "Sing for Absolution", youtubeAddress: ""),
-                Track(title: "Time is Running Out", youtubeAddress: ""),
-                Track(title: "Stockholm Syndrome", youtubeAddress: "")
-                ]),
-            Album(title: "Black Holes and Revelations", coverImageUrl: "", tracks: [])
-            ]),
-        Artist(name: "Queen", tags: ["rock"], info: "best band ever", followersCount: 450, albums: [
-            Album(title: "Jazz", coverImageUrl: "", tracks: []),
-            Album(title: "Innuendo", coverImageUrl: "", tracks: []),
-            Album(title: "Phantom of The Opera", coverImageUrl: "", tracks: [])
-            ]),
-        Artist(name: "Talking Heads", tags: ["alternative"], info: " ", followersCount: 20, albums: [])
-    ]
-
-    let favoryArtistsList = MListViewController()
+        
     
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
         
-        favoryArtistsList.title = "Favoriler"
-
-        let artistsData = ArtistsListDataProvider()
-        artistsData.addArtists(artists)
+        App.LoadSettings()
         
-        favoryArtistsList.dataProvider = artistsData
-        favoryArtistsList.onItemSelected = onArtistSelected
+        let favoryArtistsList = MListViewController<Artist, MArtistListCell>(
+            title: "Favoriler",
+            defaultItems: [
+                Artist(id: "123", name: "muse", listeners: 123, imageUrl: "", albums: [])
+            ],
+            cellNib: "MArtistListCell",
+            onItemSelected: { (selectedArtist) in
+                print("cell selected \(selectedArtist)")
+                
+                App.pushAction( ShowAlbumsForArtist(artist: selectedArtist) )
+                
+            },
+            configCell:  { (cell, item) in
+                cell.lblArtistTitle.text = item.name
+                return cell
+            })
+        
+            Api.getArtists(0, errorCallback: {
+                print("error")
+            },
+            successCallback: { artists in
+                print(artists)
+                favoryArtistsList.updateWith(artists)
+            })
+        
+        let tab = UITabBarController()
+        tab.viewControllers = [
+            UINavigationController(rootViewController: favoryArtistsList)
+        ]
 
-        window!.rootViewController = UINavigationController(rootViewController: favoryArtistsList)
+        currentView = favoryArtistsList
+        window!.rootViewController = tab
         window!.makeKeyAndVisible()
         
         return true
     }
     
-    func onArtistSelected(artistIndex: Int) {
+    /*func onArtistSelected(artistIndex: Int) {
         print("artist selected: \( artistIndex )")
         
         let albumsList = MListViewController()
@@ -76,7 +72,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             self.onAlbumSelected(artistIndex, albumIndex: albumIndex)
         }
         
-        favoryArtistsList.navigationController?.pushViewController(albumsList, animated: true)
+        currentView?.navigationController?.pushViewController(albumsList, animated: true)
     }
     
     func onAlbumSelected(artistIndex:Int, albumIndex: Int){
@@ -90,9 +86,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         tracksData.addTracks(artists[artistIndex].albums[albumIndex].tracks)
         trackList.dataProvider = tracksData
         
-        favoryArtistsList.navigationController?.pushViewController(trackList, animated: true)
+        currentView?.navigationController?.pushViewController(trackList, animated: true)
     }
-
+*/
     func applicationWillResignActive(application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.

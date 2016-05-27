@@ -53,10 +53,10 @@ class MListViewControllerTests: XCTestCase {
     func testConfigureCell(){
         
         let sutItemIndex = 1
-        let artistCell = listView?.tableView.cellForRowAtIndexPath(NSIndexPath(forRow: sutItemIndex, inSection: 0)) as? MArtistsTableViewCell
+        let artistCell = listView?.tableView.cellForRowAtIndexPath(NSIndexPath(forRow: sutItemIndex, inSection: 0)) as? MArtistListCell
         
         // check artist name
-        let cellArtistName = artistCell?.lblName.text
+        let cellArtistName = artistCell?.lblArtistTitle.text
         
         XCTAssertTrue(cellArtistName == artistList?[sutItemIndex].name)
     }

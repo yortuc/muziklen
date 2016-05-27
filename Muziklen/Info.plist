@@ -41,5 +41,7 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+    <key>apiRoot</key>
+    <string>https://yortuc-node.herokuapp.com/</string>
 </dict>
 </plist>

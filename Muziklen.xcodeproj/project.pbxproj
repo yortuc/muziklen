@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		15FB8C331CF8F78700FFF99D /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15FB8C321CF8F78700FFF99D /* Action.swift */; };
 		15FE300D1CDBC2B5005BE6CC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15FE300C1CDBC2B5005BE6CC /* AppDelegate.swift */; };
 		15FE30151CDBC2B5005BE6CC /* Muziklen.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 15FE30131CDBC2B5005BE6CC /* Muziklen.xcdatamodeld */; };
 		15FE30171CDBC2B5005BE6CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15FE30161CDBC2B5005BE6CC /* Assets.xcassets */; };
@@ -14,18 +15,17 @@
 		15FE30251CDBC2B5005BE6CC /* MListViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15FE30241CDBC2B5005BE6CC /* MListViewControllerTests.swift */; };
 		15FE30301CDBC2B5005BE6CC /* MuziklenUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15FE302F1CDBC2B5005BE6CC /* MuziklenUITests.swift */; };
 		15FE303E1CDBC603005BE6CC /* MListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15FE303D1CDBC603005BE6CC /* MListViewController.swift */; };
-		15FE30421CDBC6B6005BE6CC /* ArtistsListDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15FE30411CDBC6B6005BE6CC /* ArtistsListDataProvider.swift */; };
-		15FE30441CDBC83D005BE6CC /* ListDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15FE30431CDBC83D005BE6CC /* ListDataProvider.swift */; };
 		15FE30461CDBC91B005BE6CC /* Artist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15FE30451CDBC91B005BE6CC /* Artist.swift */; };
 		15FE30481CDF2AAB005BE6CC /* MArtistListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15FE30471CDF2AAA005BE6CC /* MArtistListCell.swift */; };
 		15FE304A1CE22462005BE6CC /* MArtistListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15FE30491CE22462005BE6CC /* MArtistListCell.xib */; };
 		15FE304C1CE23096005BE6CC /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15FE304B1CE23096005BE6CC /* App.swift */; };
 		15FE304F1CE23CAC005BE6CC /* MAlbumListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15FE304D1CE23CAC005BE6CC /* MAlbumListCell.swift */; };
 		15FE30501CE23CAC005BE6CC /* MAlbumListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15FE304E1CE23CAC005BE6CC /* MAlbumListCell.xib */; };
-		15FE30521CE23E69005BE6CC /* AlbumListDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15FE30511CE23E69005BE6CC /* AlbumListDataProvider.swift */; };
 		15FE30551CE24F90005BE6CC /* MTrackListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15FE30531CE24F90005BE6CC /* MTrackListCell.swift */; };
 		15FE30561CE24F90005BE6CC /* MTrackListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15FE30541CE24F90005BE6CC /* MTrackListCell.xib */; };
-		15FE30581CE2502B005BE6CC /* TrackListDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15FE30571CE2502B005BE6CC /* TrackListDataProvider.swift */; };
+		15FE305A1CE70599005BE6CC /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15FE30591CE70599005BE6CC /* Api.swift */; };
+		15FE305C1CE73B89005BE6CC /* Publisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15FE305B1CE73B89005BE6CC /* Publisher.swift */; };
+		5FF40605D79FED22B1591E15 /* Pods_Muziklen.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB4158A85B6DC53A68117C7A /* Pods_Muziklen.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +46,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		15FB8C321CF8F78700FFF99D /* Action.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Action.swift; path = Muziklen/Action.swift; sourceTree = "<group>"; };
 		15FE30091CDBC2B5005BE6CC /* Muziklen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Muziklen.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		15FE300C1CDBC2B5005BE6CC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		15FE30141CDBC2B5005BE6CC /* Muziklen.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Muziklen.xcdatamodel; sourceTree = "<group>"; };
@@ -59,18 +60,19 @@
 		15FE302F1CDBC2B5005BE6CC /* MuziklenUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuziklenUITests.swift; sourceTree = "<group>"; };
 		15FE30311CDBC2B5005BE6CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		15FE303D1CDBC603005BE6CC /* MListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MListViewController.swift; path = Muziklen/MListViewController.swift; sourceTree = "<group>"; };
-		15FE30411CDBC6B6005BE6CC /* ArtistsListDataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ArtistsListDataProvider.swift; path = Muziklen/ArtistsListDataProvider.swift; sourceTree = "<group>"; };
-		15FE30431CDBC83D005BE6CC /* ListDataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ListDataProvider.swift; path = Muziklen/ListDataProvider.swift; sourceTree = "<group>"; };
 		15FE30451CDBC91B005BE6CC /* Artist.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Artist.swift; path = Muziklen/Artist.swift; sourceTree = "<group>"; };
 		15FE30471CDF2AAA005BE6CC /* MArtistListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MArtistListCell.swift; path = Muziklen/MArtistListCell.swift; sourceTree = "<group>"; };
 		15FE30491CE22462005BE6CC /* MArtistListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MArtistListCell.xib; path = Muziklen/MArtistListCell.xib; sourceTree = "<group>"; };
 		15FE304B1CE23096005BE6CC /* App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
 		15FE304D1CE23CAC005BE6CC /* MAlbumListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MAlbumListCell.swift; path = Muziklen/MAlbumListCell.swift; sourceTree = "<group>"; };
 		15FE304E1CE23CAC005BE6CC /* MAlbumListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MAlbumListCell.xib; path = Muziklen/MAlbumListCell.xib; sourceTree = "<group>"; };
-		15FE30511CE23E69005BE6CC /* AlbumListDataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AlbumListDataProvider.swift; path = Muziklen/AlbumListDataProvider.swift; sourceTree = "<group>"; };
 		15FE30531CE24F90005BE6CC /* MTrackListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MTrackListCell.swift; path = Muziklen/MTrackListCell.swift; sourceTree = "<group>"; };
 		15FE30541CE24F90005BE6CC /* MTrackListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MTrackListCell.xib; path = Muziklen/MTrackListCell.xib; sourceTree = "<group>"; };
-		15FE30571CE2502B005BE6CC /* TrackListDataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TrackListDataProvider.swift; path = Muziklen/TrackListDataProvider.swift; sourceTree = "<group>"; };
+		15FE30591CE70599005BE6CC /* Api.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
+		15FE305B1CE73B89005BE6CC /* Publisher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Publisher.swift; sourceTree = "<group>"; };
+		23AB580B4DE68B4746399946 /* Pods-Muziklen.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Muziklen.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Muziklen/Pods-Muziklen.debug.xcconfig"; sourceTree = "<group>"; };
+		AE8DE55374E3292D85952ED5 /* Pods-Muziklen.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Muziklen.release.xcconfig"; path = "Pods/Target Support Files/Pods-Muziklen/Pods-Muziklen.release.xcconfig"; sourceTree = "<group>"; };
+		EB4158A85B6DC53A68117C7A /* Pods_Muziklen.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Muziklen.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5FF40605D79FED22B1591E15 /* Pods_Muziklen.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -107,6 +110,8 @@
 				15FE30231CDBC2B5005BE6CC /* MuziklenTests */,
 				15FE302E1CDBC2B5005BE6CC /* MuziklenUITests */,
 				15FE300A1CDBC2B5005BE6CC /* Products */,
+				53BE597A60806F56CA0197C4 /* Pods */,
+				6EA70930C6D4C7C7245522BA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -123,12 +128,14 @@
 		15FE300B1CDBC2B5005BE6CC /* Muziklen */ = {
 			isa = PBXGroup;
 			children = (
-				15FE300C1CDBC2B5005BE6CC /* AppDelegate.swift */,
+				15FE305B1CE73B89005BE6CC /* Publisher.swift */,
 				15FE30161CDBC2B5005BE6CC /* Assets.xcassets */,
 				15FE30181CDBC2B5005BE6CC /* LaunchScreen.storyboard */,
 				15FE301B1CDBC2B5005BE6CC /* Info.plist */,
 				15FE30131CDBC2B5005BE6CC /* Muziklen.xcdatamodeld */,
+				15FE300C1CDBC2B5005BE6CC /* AppDelegate.swift */,
 				15FE304B1CE23096005BE6CC /* App.swift */,
+				15FE30591CE70599005BE6CC /* Api.swift */,
 			);
 			path = Muziklen;
 			sourceTree = "<group>";
@@ -169,12 +176,26 @@
 			isa = PBXGroup;
 			children = (
 				15FE30451CDBC91B005BE6CC /* Artist.swift */,
-				15FE30431CDBC83D005BE6CC /* ListDataProvider.swift */,
-				15FE30411CDBC6B6005BE6CC /* ArtistsListDataProvider.swift */,
-				15FE30511CE23E69005BE6CC /* AlbumListDataProvider.swift */,
-				15FE30571CE2502B005BE6CC /* TrackListDataProvider.swift */,
+				15FB8C321CF8F78700FFF99D /* Action.swift */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		53BE597A60806F56CA0197C4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				23AB580B4DE68B4746399946 /* Pods-Muziklen.debug.xcconfig */,
+				AE8DE55374E3292D85952ED5 /* Pods-Muziklen.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		6EA70930C6D4C7C7245522BA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EB4158A85B6DC53A68117C7A /* Pods_Muziklen.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -184,9 +205,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 15FE30341CDBC2B5005BE6CC /* Build configuration list for PBXNativeTarget "Muziklen" */;
 			buildPhases = (
+				D169D2267E18A79C8E562C67 /* Check Pods Manifest.lock */,
 				15FE30051CDBC2B5005BE6CC /* Sources */,
 				15FE30061CDBC2B5005BE6CC /* Frameworks */,
 				15FE30071CDBC2B5005BE6CC /* Resources */,
+				7217BF02788585DEEABA97CB /* Embed Pods Frameworks */,
+				BDE5BD20B24A1390B64DCCBF /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -305,23 +329,70 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		7217BF02788585DEEABA97CB /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Muziklen/Pods-Muziklen-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BDE5BD20B24A1390B64DCCBF /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Muziklen/Pods-Muziklen-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D169D2267E18A79C8E562C67 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		15FE30051CDBC2B5005BE6CC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				15FE30461CDBC91B005BE6CC /* Artist.swift in Sources */,
-				15FE30581CE2502B005BE6CC /* TrackListDataProvider.swift in Sources */,
 				15FE303E1CDBC603005BE6CC /* MListViewController.swift in Sources */,
 				15FE304F1CE23CAC005BE6CC /* MAlbumListCell.swift in Sources */,
+				15FB8C331CF8F78700FFF99D /* Action.swift in Sources */,
 				15FE30151CDBC2B5005BE6CC /* Muziklen.xcdatamodeld in Sources */,
 				15FE30481CDF2AAB005BE6CC /* MArtistListCell.swift in Sources */,
+				15FE305C1CE73B89005BE6CC /* Publisher.swift in Sources */,
+				15FE305A1CE70599005BE6CC /* Api.swift in Sources */,
 				15FE30551CE24F90005BE6CC /* MTrackListCell.swift in Sources */,
-				15FE30441CDBC83D005BE6CC /* ListDataProvider.swift in Sources */,
 				15FE304C1CE23096005BE6CC /* App.swift in Sources */,
 				15FE300D1CDBC2B5005BE6CC /* AppDelegate.swift in Sources */,
-				15FE30521CE23E69005BE6CC /* AlbumListDataProvider.swift in Sources */,
-				15FE30421CDBC6B6005BE6CC /* ArtistsListDataProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -455,6 +526,7 @@
 		};
 		15FE30351CDBC2B5005BE6CC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 23AB580B4DE68B4746399946 /* Pods-Muziklen.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Muziklen/Info.plist;
@@ -467,6 +539,7 @@
 		};
 		15FE30361CDBC2B5005BE6CC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AE8DE55374E3292D85952ED5 /* Pods-Muziklen.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Muziklen/Info.plist;
@@ -542,6 +615,7 @@
 				15FE30361CDBC2B5005BE6CC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		15FE30371CDBC2B5005BE6CC /* Build configuration list for PBXNativeTarget "MuziklenTests" */ = {
 			isa = XCConfigurationList;
@@ -550,6 +624,7 @@
 				15FE30391CDBC2B5005BE6CC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		15FE303A1CDBC2B5005BE6CC /* Build configuration list for PBXNativeTarget "MuziklenUITests" */ = {
 			isa = XCConfigurationList;
@@ -558,6 +633,7 @@
 				15FE303C1CDBC2B5005BE6CC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
